@@ -18,7 +18,7 @@ if l == 1:
     def icq(phone):
         try:
             url = 'https://u.icq.net/api/v70/rapi/auth/sendCode'
-            playload = {
+            payload = {
                 "reqId": "94446-1645359697",
                 "params": {
                     "phone": str(phone),
@@ -28,7 +28,7 @@ if l == 1:
                     "application": "icq"
                 }
             }
-            a = requests.post(url, json=playload)
+            a = requests.post(url, json=payload)
             print(a.text)
         except Exception as e:
             print(e)
